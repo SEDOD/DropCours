@@ -1,13 +1,6 @@
 
 "use strict";
 
-/*
- * DropCours — MVP frontend de démonstration
- * HTML + CSS + JavaScript natifs.
- * Les comptes, résultats et progrès restent locaux au navigateur.
- * Aucun backend n'est connecté.
- */
-
 const app = document.querySelector("#app");
 const nav = document.querySelector("#main-nav");
 const menuToggle = document.querySelector("#menu-toggle");
@@ -877,11 +870,7 @@ document.addEventListener("submit", event => {
       return;
     }
 
-    /*
-     * Démonstration uniquement :
-     * ne pas enregistrer de mot de passe.
-     * L'inscription réelle sera traitée par le backend.
-     */
+
     let profile = state.profiles.find(item => item.email === email);
     if (!profile) {
       profile = { name, email };

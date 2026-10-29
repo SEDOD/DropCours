@@ -2,93 +2,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DropCours : apprenez la programmation progressivement, grâce à la pratique.">
-    <title>DropCours | Apprendre en pratiquant</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DropCours : apprenez la programmation à votre rythme.">
+  <title>DropCours — Apprenez en construisant</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
-
 <body>
-    <header class="header">
-        <a href="index.html" class="logo">DropCours</a>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="DropCours, accueil">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>Drop<span class="brand-accent">Cours</span></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+        <a href="#formations">Formations</a>
+        <a href="#methode">Comment ça marche</a>
+        <a href="#apropos">À propos</a>
+        <a class="nav-login" href="#connexion">Connexion</a>
+        <a class="button button-small" href="#inscription">Commencer gratuitement</a>
+      </nav>
+    </div>
+  </header>
 
-        <nav class="navigation">
-            <a href="#accueil">Accueil</a>
-            <a href="#cours">Nos cours</a>
-            <a href="#methode">Notre méthode</a>
-        </nav>
-
-        <a href="#cours" class="button">Commencer à apprendre</a>
-    </header>
-
-    <main>
-        <section class="hero" id="accueil">
-            <div class="hero-content">
-                <p class="eyebrow">APPRENDRE. PRATIQUER. PROGRESSER.</p>
-
-                <h1>Développez vos compétences, une leçon à la fois.</h1>
-
-                <p>
-                    Apprenez la programmation à votre rythme,
-                    pratiquez avec des exercices et construisez
-                    progressivement vos compétences numériques.
-                </p>
-
-                <a href="#cours" class="button">
-                    Découvrir les cours
-                </a>
+  <main id="contenu">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Apprendre. Pratiquer. Progresser.</p>
+          <h1>Le numérique s’apprend en <span>construisant.</span></h1>
+          <p class="hero-description">Développez vos compétences en programmation grâce à des cours structurés, des exercices pratiques et une progression à votre rythme.</p>
+          <div class="hero-actions">
+            <a class="button" href="#formations">Explorer les formations <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#methode">Découvrir la méthode</a>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✓</span>
+            <span>Progressez étape par étape, depuis les bases.</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration décorative d’apprentissage du code">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="code-card">
+            <div class="code-card-top"><span></span><span></span><span></span><small>premier_programme.py</small></div>
+            <div class="code-content">
+              <p><span class="line-no">01</span> <span class="code-purple">def</span> <span class="code-blue">bienvenue</span>():</p>
+              <p><span class="line-no">02</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">print</span>(<span class="code-orange">"Bienvenue sur DropCours !"</span>)</p>
+              <p><span class="line-no">03</span></p>
+              <p><span class="line-no">04</span> bienvenue()</p>
+              <div class="code-output"><span>▶</span> Bienvenue sur DropCours !</div>
             </div>
+          </div>
+          <div class="floating-card floating-progress">
+            <span class="floating-icon">↗</span>
+            <span><strong>Chaque étape compte</strong><small>Apprenez à votre rythme</small></span>
+          </div>
+          <div class="floating-card floating-badge">
+            <span class="badge-check">✓</span>
+            <span><strong>Pratique</strong><small>La théorie en action</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="hero-card">
-                <p>Votre prochaine compétence</p>
-                <h2>HTML & CSS</h2>
-                <p>Apprenez à créer vos premières pages web.</p>
-                <div class="progress-track">
-                    <div class="progress-value"></div>
-                </div>
-                <small>Chaque expert a commencé quelque part.</small>
-            </div>
-        </section>
+    <section class="trust-strip" aria-label="Principes de DropCours">
+      <div class="container trust-grid">
+        <div><span class="trust-symbol">01</span><span><strong>Des parcours clairs</strong><small>Avancez étape par étape</small></span></div>
+        <div><span class="trust-symbol">02</span><span><strong>De la pratique</strong><small>Apprenez en faisant</small></span></div>
+        <div><span class="trust-symbol">03</span><span><strong>À votre rythme</strong><small>Construisez vos compétences</small></span></div>
+      </div>
+    </section>
 
-        <section class="courses" id="cours">
-            <h2>Choisissez votre parcours</h2>
-            <p>Les premières étapes de votre apprentissage commencent ici.</p>
+    <section class="section courses-section" id="formations">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Choisissez votre départ</p><h2>Explorez les formations</h2></div>
+          <p>Commencez par les fondamentaux, puis développez vos compétences avec des projets concrets.</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-illustration course-html"><span class="tech-mark">&lt;/&gt;</span><span class="course-level">Débutant</span></div>
+            <div class="course-body"><p class="course-category">Développement web</p><h3>Les bases du HTML et du CSS</h3><p>Créez vos premières pages web et apprenez à les mettre en forme.</p><div class="course-meta"><span>◷ À votre rythme</span><span>Fondamentaux</span></div><a class="course-link" href="#inscription">Découvrir le parcours <span>→</span></a></div>
+          </article>
+          <article class="course-card">
+            <div class="course-illustration course-js"><span class="tech-mark">JS</span><span class="course-level">Débutant</span></div>
+            <div class="course-body"><p class="course-category">Programmation web</p><h3>Premiers pas en JavaScript</h3><p>Ajoutez de l’interactivité à vos pages et comprenez la logique du code.</p><div class="course-meta"><span>◷ À votre rythme</span><span>Fondamentaux</span></div><a class="course-link" href="#inscription">Découvrir le parcours <span>→</span></a></div>
+          </article>
+          <article class="course-card">
+            <div class="course-illustration course-python"><span class="tech-mark">Py</span><span class="course-level">Débutant</span></div>
+            <div class="course-body"><p class="course-category">Programmation</p><h3>Découvrir Python</h3><p>Apprenez les variables, les conditions, les boucles et les fonctions.</p><div class="course-meta"><span>◷ À votre rythme</span><span>Fondamentaux</span></div><a class="course-link" href="#inscription">Découvrir le parcours <span>→</span></a></div>
+          </article>
+        </div>
+        <p class="demo-note">Aperçu de conception : ces cartes présentent des parcours envisagés. Les cours ne sont pas encore connectés à une base de données.</p>
+      </div>
+    </section>
 
-            <div class="course-list">
-                <article class="course-card">
-                    <h3>HTML & CSS</h3>
-                    <p>Découvrez la structure et le design des pages web.</p>
-                    <a href="#methode">Découvrir le parcours</a>
-                </article>
+    <section class="section method-section" id="methode">
+      <div class="container method-grid">
+        <div class="method-copy"><p class="eyebrow">Une méthode progressive</p><h2>Comprendre, pratiquer, progresser.</h2><p>DropCours vise à rendre l’apprentissage du numérique plus concret. Chaque étape doit aider l’apprenant à comprendre une notion, à l’appliquer et à mesurer ses progrès.</p><a class="button button-outline" href="#inscription">Préparer mon apprentissage <span aria-hidden="true">→</span></a></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">1</span><div><h3>Suivez une leçon</h3><p>Découvrez une notion expliquée simplement et organisée par étapes.</p></div></article>
+          <article class="step"><span class="step-number">2</span><div><h3>Mettez en pratique</h3><p>Consolidez votre compréhension avec des exercices adaptés.</p></div></article>
+          <article class="step"><span class="step-number">3</span><div><h3>Suivez vos progrès</h3><p>Visualisez les étapes terminées et identifiez la suite de votre parcours.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-                <article class="course-card">
-                    <h3>JavaScript</h3>
-                    <p>Rendez vos pages web interactives et dynamiques.</p>
-                    <a href="#methode">Découvrir le parcours</a>
-                </article>
+    <section class="cta-section" id="inscription">
+      <div class="container cta-content"><div><p class="eyebrow eyebrow-light">Votre prochaine étape commence ici</p><h2>Construisez vos compétences, une leçon à la fois.</h2><p>DropCours est en cours de développement. Rejoignez bientôt une expérience d’apprentissage conçue pour la pratique.</p></div><a class="button button-light" href="mailto:contact@dropcours.example?subject=Int%C3%A9r%C3%AAt%20pour%20DropCours">Manifester mon intérêt <span aria-hidden="true">→</span></a></div>
+    </section>
 
-                <article class="course-card">
-                    <h3>Python</h3>
-                    <p>Apprenez les bases de la programmation avec Python.</p>
-                    <a href="#methode">Découvrir le parcours</a>
-                </article>
-            </div>
-        </section>
+    <section class="sr-only" id="connexion" aria-label="Connexion"><h2>Connexion</h2><p>Le formulaire de connexion sera ajouté lors de l’intégration du backend.</p></section>
+    <section class="sr-only" id="apropos" aria-label="À propos"><h2>À propos de DropCours</h2><p>DropCours est une plateforme d’apprentissage numérique en cours de conception.</p></section>
+  </main>
 
-        <section class="method" id="methode">
-            <h2>Apprenez en pratiquant</h2>
-            <p>
-                Sur DropCours, l'objectif est de comprendre les notions,
-                de les appliquer et de progresser étape par étape.
-            </p>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; <span id="year">2026</span> DropCours. Tous droits réservés.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-main"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Drop<span class="brand-accent">Cours</span></span></a><p>Apprendre aujourd’hui, réussir demain.</p><div class="footer-links"><a href="#formations">Formations</a><a href="#methode">Méthode</a><a href="mailto:contact@dropcours.example">Contact</a></div></div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> DropCours — Prototype de travail</span><span>Conçu pour apprendre en construisant.</span></div>
+  </footer>
 </body>
 </html>

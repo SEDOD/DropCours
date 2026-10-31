@@ -1,70 +1,172 @@
-
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DropCours : apprenez la programmation en pratiquant, étape par étape.">
-  <meta name="theme-color" content="#14233b">
-  <title>DropCours — Apprendre en construisant</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#app">Aller au contenu</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DropCours — Apprendre. Pratiquer. Progresser. Une plateforme d'apprentissage pratique des compétences numériques." />
+    <title>DropCours — Apprendre. Pratiquer. Progresser.</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#accueil" aria-label="DropCours, accueil">
-        <span class="brand-mark">D</span>
-        <span>DropCours</span>
-      </a>
-
-      <button class="menu-toggle" id="menu-toggle"
-        aria-expanded="false" aria-controls="main-nav"
-        aria-label="Ouvrir le menu">☰</button>
-
-      <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
-        <a href="#formations" data-nav="formations">Formations</a>
-        <a href="#methode" data-nav="methode">Méthode</a>
-        <a href="#tableau-de-bord" data-nav="tableau-de-bord">Mon espace</a>
-        <button class="btn btn-outline btn-small" data-action="login">Connexion</button>
-        <button class="btn btn-primary btn-small" data-action="signup">Commencer</button>
-      </nav>
-    </div>
-  </header>
-
-  <main id="app" tabindex="-1">
-    <noscript>
-      <div class="container notice">
-        Active JavaScript pour utiliser le prototype DropCours.
-      </div>
-    </noscript>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <div>
-        <a class="brand brand-light" href="#accueil">
-          <span class="brand-mark">D</span>
-          <span>DropCours</span>
+    <header class="site-header" data-header>
+      <div class="container nav-wrap">
+        <a class="brand" href="#accueil" aria-label="DropCours, revenir à l'accueil">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">DROP<span>COURS</span></span>
         </a>
-        <p>Apprendre aujourd’hui, réussir demain.</p>
-      </div>
 
-      <div class="footer-links">
-        <a href="#formations">Formations</a>
-        <a href="#methode">Notre méthode</a>
-        <a href="#tableau-de-bord">Espace apprenant</a>
-        <button class="link-button" data-action="admin">
-          Aperçu administrateur
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+          <span class="sr-only">Ouvrir le menu</span>
+          <span></span><span></span><span></span>
         </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Navigation principale">
+          <a class="nav-link is-active" href="#accueil">Accueil</a>
+          <a class="nav-link" href="#catalogue">Catalogue</a>
+          <a class="nav-link" href="#methode">Notre méthode</a>
+          <div class="nav-actions">
+            <button class="button button-ghost button-small" type="button" data-toast="La connexion sera disponible prochainement.">Connexion</button>
+            <button class="button button-primary button-small" type="button" data-toast="La création de compte sera disponible prochainement.">S'inscrire <span aria-hidden="true">↗</span></button>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
 
-  </footer>
+    <main id="main-content">
+      <section class="hero section-grid" id="accueil">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> La pratique au cœur de l'apprentissage</p>
+            <h1>Construisez les compétences qui <em>ouvrent</em> la suite.</h1>
+            <p class="hero-text">Apprenez les compétences numériques essentielles, pratiquez à votre rythme et avancez avec une méthode simple, claire et concrète.</p>
+            <div class="hero-actions">
+              <a class="button button-primary button-large" href="#catalogue">Explorer le catalogue <span aria-hidden="true">↗</span></a>
+              <a class="button button-link" href="#cta">Créer un compte <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-note"><span class="note-line"></span> Apprendre. Pratiquer. Progresser.</div>
+          </div>
 
-  <div id="toast-region" class="toast-region"
-    aria-live="polite" aria-atomic="true"></div>
-</body>
+          <div class="hero-visual reveal reveal-delay" aria-label="Illustration d'un parcours d'apprentissage numérique" role="img">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="visual-glow"></div>
+            <div class="code-card">
+              <div class="code-card-top"><span class="window-dot dot-red"></span><span class="window-dot dot-yellow"></span><span class="window-dot dot-green"></span><span class="code-file">parcours.js</span></div>
+              <div class="code-lines" aria-hidden="true">
+                <span><b>01</b><i class="code-purple">const</i> parcours <i class="code-soft">=</i> <i class="code-blue">{</i></span>
+                <span><b>02</b>&nbsp;&nbsp;apprendre: <i class="code-green">true</i>,</span>
+                <span><b>03</b>&nbsp;&nbsp;pratiquer: <i class="code-green">true</i>,</span>
+                <span><b>04</b>&nbsp;&nbsp;progresser: <i class="code-green">true</i></span>
+                <span><b>05</b><i class="code-blue">}</i></span>
+              </div>
+              <div class="code-card-footer"><span class="status-pulse"></span> parcours en construction <span class="footer-arrow">↗</span></div>
+            </div>
+            <div class="float-card progress-card">
+              <div class="float-icon icon-route" aria-hidden="true">↗</div>
+              <div><strong>Votre parcours</strong><small>Avancer étape par étape</small></div>
+              <span class="mini-arrow">→</span>
+            </div>
+            <div class="float-card practice-card">
+              <div class="practice-check" aria-hidden="true">✓</div>
+              <div><strong>Passer à la pratique</strong><small>Le prochain geste compte</small></div>
+            </div>
+            <div class="visual-label label-learn">APPRENDRE</div>
+            <div class="visual-label label-grow">PROGRESSER</div>
+          </div>
+        </div>
+        <div class="hero-bottom container" aria-hidden="true"><span>Une méthode pensée pour avancer</span><div class="scroll-line"></div><span>↓</span></div>
+      </section>
+
+      <section class="principles section" id="principes">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">L'esprit DropCours</p>
+            <h2>Apprendre ne s'arrête pas<br /><span>à la théorie.</span></h2>
+            <p>Chaque étape est conçue pour transformer une nouvelle idée en compétence durable.</p>
+          </div>
+          <div class="principles-grid">
+            <article class="principle-card principle-blue reveal">
+              <div class="card-number">01</div>
+              <div class="principle-icon" aria-hidden="true"><span class="book-shape"></span></div>
+              <h3>Apprendre</h3>
+              <p>Acquérir de nouvelles connaissances avec des explications claires et accessibles.</p>
+              <span class="card-link">Comprendre d'abord <span aria-hidden="true">↗</span></span>
+            </article>
+            <article class="principle-card principle-light reveal reveal-delay-short">
+              <div class="card-number">02</div>
+              <div class="principle-icon icon-practice" aria-hidden="true"><span>⌘</span></div>
+              <h3>Pratiquer</h3>
+              <p>Appliquer ce que vous apprenez à travers des exercices et des situations concrètes.</p>
+              <span class="card-link">Faire pour retenir <span aria-hidden="true">↗</span></span>
+            </article>
+            <article class="principle-card principle-outline reveal reveal-delay">
+              <div class="card-number">03</div>
+              <div class="principle-icon icon-progress" aria-hidden="true"><span>↗</span></div>
+              <h3>Progresser</h3>
+              <p>Développer vos compétences pas à pas et garder une vision claire du chemin parcouru.</p>
+              <span class="card-link">Avancer avec confiance <span aria-hidden="true">↗</span></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalogue section section-soft" id="catalogue">
+        <div class="container catalogue-inner">
+          <div class="catalogue-copy reveal">
+            <p class="eyebrow">Un espace en devenir</p>
+            <h2>Catalogue</h2>
+            <p class="catalogue-lead">Cet espace est réservé aux cours, formations et ressources pédagogiques qui seront progressivement proposés sur DropCours.</p>
+            <div class="empty-status"><span class="status-pulse"></span> Le catalogue se construit avec soin</div>
+          </div>
+          <div class="catalogue-art reveal reveal-delay" aria-hidden="true">
+            <div class="shelf shelf-back"></div>
+            <div class="shelf shelf-front"></div>
+            <div class="book book-one"></div><div class="book book-two"></div><div class="book book-three"></div>
+            <div class="catalogue-orbit"></div>
+            <div class="catalogue-star star-one">✦</div><div class="catalogue-star star-two">·</div><div class="catalogue-star star-three">✦</div>
+            <div class="catalogue-label">RESSOURCES<br /><strong>À VENIR</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="method section" id="methode">
+        <div class="container">
+          <div class="method-top reveal">
+            <div><p class="eyebrow">Notre méthode</p><h2>Un chemin clair.<br /><span>Des progrès visibles.</span></h2></div>
+            <p class="method-intro">Pas à pas, la plateforme vous accompagne de la découverte à l'autonomie, sans complexité inutile.</p>
+          </div>
+          <div class="method-steps">
+            <article class="method-step reveal"><div class="step-index">01</div><div class="step-line"></div><div><h3>Découvrez</h3><p>Explorez les ressources d'apprentissage et identifiez les sujets qui vous font avancer.</p></div><span class="step-arrow" aria-hidden="true">↗</span></article>
+            <article class="method-step reveal reveal-delay-short"><div class="step-index">02</div><div class="step-line"></div><div><h3>Apprenez & pratiquez</h3><p>Progressez à votre rythme en alternant compréhension, expérimentation et répétition.</p></div><span class="step-arrow" aria-hidden="true">↗</span></article>
+            <article class="method-step reveal reveal-delay"><div class="step-index">03</div><div class="step-line"></div><div><h3>Suivez votre progression</h3><p>Consolidez vos acquis et développez vos compétences étape par étape.</p></div><span class="step-arrow" aria-hidden="true">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section section" id="cta">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <div class="cta-pattern" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="cta-content"><p class="eyebrow eyebrow-light">Le prochain chapitre commence ici</p><h2>Prêt à apprendre<br /><em>autrement&nbsp;?</em></h2><p>Rejoignez DropCours et construisez votre progression, une pratique à la fois.</p><button class="button button-white button-large" type="button" data-toast="DropCours arrive bientôt. Merci pour votre intérêt.">Rejoindre DropCours <span aria-hidden="true">↗</span></button></div>
+            <div class="cta-mark" aria-hidden="true"><span>DC</span><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-main">
+        <div class="footer-brand"><a class="brand brand-footer" href="#accueil"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-name">DROP<span>COURS</span></span></a><p>Une plateforme pour apprendre, pratiquer et progresser dans le numérique.</p></div>
+        <div class="footer-column"><h3>Explorer</h3><a href="#accueil">Accueil</a><a href="#catalogue">Catalogue</a><a href="#methode">Notre méthode</a></div>
+        <div class="footer-column"><h3>La plateforme</h3><a href="#principes">Notre approche</a><a href="#cta">Rejoindre DropCours</a></div>
+        <div class="footer-column footer-contact"><h3>Contact</h3><p>Les informations de contact seront bientôt disponibles.</p></div>
+      </div>
+      <div class="container footer-bottom"><span>© <span data-year>2026</span> DropCours. Tous droits réservés.</span><span>Apprendre. Pratiquer. Progresser.</span></div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-hidden="true"><span class="toast-dot"></span><span data-toast-message></span></div>
+    <script src="script.js"></script>
+  </body>
 </html>
